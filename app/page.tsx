@@ -1,7 +1,6 @@
 import AboutUs from "./components/AboutUs"
 import Contact from "./components/Contact"
-import Hero from "./components/Hero"
-import Q from "./components/modal"
+import Hero from "./components/Hero" 
 import Projects from "./components/Projects"
 import Services from "./components/Service"
 
@@ -21,7 +20,7 @@ const Page = () => {
         <Projects/>
       </section>
       <section id="contact">
-      <Q/>
+      <Contact/>
       </section>
       
     </div>
