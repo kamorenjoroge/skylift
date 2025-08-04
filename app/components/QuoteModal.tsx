@@ -164,11 +164,7 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
               >
                 Request Professional Quote
               </h2>
-              <p className="text-muted-foreground max-w-2xl">
-                Share your project details with our expert team. We will provide
-                a comprehensive quote tailored to your specific requirements
-                within 24 hours.
-              </p>
+              
             </div>
             <button
               className="flex-shrink-0 p-2 rounded-full bg-background hover:bg-primary/10 text-muted-foreground hover:text-foreground transition-all duration-200 shadow-sm border border-border"
@@ -484,12 +480,9 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                     onChange={handleInputChange}
                     rows={5}
                     className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-sm font-medium bg-background focus:bg-background resize-vertical"
-                    placeholder="Please provide detailed information about your project including specific requirements, accessibility needs, safety considerations, timeline constraints, or any other relevant details that will help us provide an accurate quote..."
+                
                   />
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    The more details you provide, the more accurate our quote
-                    will be.
-                  </p>
+                  
                 </div>
               </div>
             </div>
@@ -500,7 +493,7 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
         <div className="flex-shrink-0 px-6 py-4 border-t border-border bg-background rounded-b-2xl">
           <form onSubmit={handleSubmit} className="w-full">
             <div className="flex flex-col-reverse sm:flex-row gap-3 justify-between items-center">
-              <p className="text-xs text-muted-foreground text-center sm:text-left">
+              <p className="text-sm text-muted-foreground text-center sm:text-left">
                 By submitting this form, you agree to be contacted by our team
                 regarding your project.
               </p>
