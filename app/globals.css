@@ -1,26 +1,50 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Primary colors (bright elevator industry blues) */
+  --color-primary: #0066CC;  /* Bright corporate blue */
+  --color-primary-light: #3385E6;  /* Lighter bright blue */
+  --color-primary-dark: #004499;  /* Darker bright blue */
+  --color-primary-glow: #1A73E8;  /* Bright glow effect */
+  
+  /* Secondary colors (bright golden/amber from logo) */
+  --color-secondary: #FFB800;  /* Bright golden amber */
+  --color-secondary-light: #FFCC33;  /* Lighter golden */
+  --color-secondary-dark: #E6A600;  /* Darker golden */
+  
+  /* Accent colors */
+  --color-accent: #ff6b35;  /* Safety orange */
+  --color-accent-light: #ff9e70;  /* Lighter orange */
+  
+  /* Industrial tones */
+  --color-industrial: #5a6a7a;  /* Machinery gray */
+  --color-industrial-light: #7d8b99;  /* Lighter gray */
+  
+  /* Status colors */
+  --color-success: #28a745;
+  --color-info: #17a2b8;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+  
+  /* Neutral colors */
+  --color-light: #FFFFFF;
+  --color-dark: #1C1C1C;
+  
+  /* Elevator status specific colors */
+  --color-operational: #28a745;
+  --color-maintenance: #fd7e14;
+  --color-inspection: #17a2b8;
+  --color-out-of-service: #dc3545;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    --color-background: #ffffff;
+    --color-foreground: #111827;    
+     --color-muted-foreground: #9ca3af; 
+     --color-border: #e5e7eb;       
+  
+  /* Additional design tokens */
+  --radius-default: 0.25rem;  /* More industrial sharpness */
+  --shadow-default: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  --shadow-primary: 0 5px 15px -5px rgba(0, 102, 204, 0.3);
+  --shadow-secondary: 0 5px 15px -5px rgba(255, 184, 0, 0.3);
+  --transition-default: all 0.2s ease;
 }
