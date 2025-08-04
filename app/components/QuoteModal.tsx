@@ -153,25 +153,25 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
       />
 
       {/* Modal Container */}
-      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-5xl max-h-[95vh] flex flex-col">
+      <div className="relative bg-background rounded-2xl shadow-2xl w-full max-w-5xl max-h-[95vh] flex flex-col">
         {/* Fixed Header */}
-        <div className="flex-shrink-0 px-6 py-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-t-2xl">
+        <div className="flex-shrink-0 px-6 py-6 border-b border-border bg-gradient-to-r from-primary/10 to-primary/20 rounded-t-2xl">
           <div className="flex items-center justify-between">
             <div>
               <h2
                 id="modal-title"
-                className="text-3xl font-bold text-gray-900 mb-2"
+                className="text-3xl font-bold text-foreground mb-2"
               >
                 Request Professional Quote
               </h2>
-              <p className="text-gray-600 max-w-2xl">
+              <p className="text-muted-foreground max-w-2xl">
                 Share your project details with our expert team. We will provide
                 a comprehensive quote tailored to your specific requirements
                 within 24 hours.
               </p>
             </div>
             <button
-              className="flex-shrink-0 p-2 rounded-full bg-white hover:bg-gray-50 text-gray-400 hover:text-gray-600 transition-all duration-200 shadow-sm border border-gray-200"
+              className="flex-shrink-0 p-2 rounded-full bg-background hover:bg-primary/10 text-muted-foreground hover:text-foreground transition-all duration-200 shadow-sm border border-border"
               onClick={onClose}
               aria-label="Close modal"
             >
@@ -188,15 +188,15 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
                 {/* Contact Information Section */}
                 <div className="space-y-6">
-                  <div className="flex items-center gap-3 pb-3 border-b-2 border-blue-100">
-                    <div className="p-3 rounded-xl bg-blue-600 text-white shadow-md">
+                  <div className="flex items-center gap-3 pb-3 border-b-2 border-primary/20">
+                    <div className="p-3 rounded-xl bg-primary text-light shadow-md">
                       <Users className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">
+                      <h3 className="text-xl font-bold text-foreground">
                         Contact Information
                       </h3>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-muted-foreground">
                         Your primary contact details
                       </p>
                     </div>
@@ -204,8 +204,8 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
 
                   <div className="space-y-5">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Full Name <span className="text-red-500">*</span>
+                      <label className="block text-sm font-semibold text-foreground mb-2">
+                        Full Name <span className="text-danger">*</span>
                       </label>
                       <input
                         type="text"
@@ -214,25 +214,25 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                         onChange={handleInputChange}
                         className={`w-full px-4 py-3 border  ${
                           errors.name
-                            ? "border-red-300 focus:ring-red-500 focus:border-red-500"
-                            : "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                        } rounded-xl focus:ring-2 transition-all duration-200 text-sm font-medium bg-gray-50 focus:bg-white`}
+                            ? "border-danger focus:ring-danger focus:border-danger"
+                            : "border-border focus:ring-primary focus:border-primary"
+                        } rounded-xl focus:ring-2 transition-all duration-200 text-sm font-medium bg-background focus:bg-background`}
                         placeholder="Enter your full name"
                       />
                       {errors.name && (
-                        <p className="mt-1 text-sm text-red-600">
+                        <p className="mt-1 text-sm text-danger">
                           {errors.name}
                         </p>
                       )}
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Email Address <span className="text-red-500">*</span>
+                      <label className="block text-sm font-semibold text-foreground mb-2">
+                        Email Address <span className="text-danger">*</span>
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                          <Mail className="h-5 w-5 text-gray-400" />
+                          <Mail className="h-5 w-5 text-muted-foreground" />
                         </div>
                         <input
                           type="email"
@@ -241,26 +241,26 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                           onChange={handleInputChange}
                           className={`w-full pl-12 pr-4 py-3 border ${
                             errors.email
-                              ? "border-red-300 focus:ring-red-500 focus:border-red-500"
-                              : "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                          } rounded-xl focus:ring-2 transition-all duration-200 text-sm font-medium bg-gray-50 focus:bg-white`}
+                              ? "border-danger focus:ring-danger focus:border-danger"
+                              : "border-border focus:ring-primary focus:border-primary"
+                          } rounded-xl focus:ring-2 transition-all duration-200 text-sm font-medium bg-background focus:bg-background`}
                           placeholder="your.email@company.com"
                         />
                       </div>
                       {errors.email && (
-                        <p className="mt-1 text-sm text-red-600">
+                        <p className="mt-1 text-sm text-danger">
                           {errors.email}
                         </p>
                       )}
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Phone Number <span className="text-red-500">*</span>
+                      <label className="block text-sm font-semibold text-foreground mb-2">
+                        Phone Number <span className="text-danger">*</span>
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                          <Phone className="h-5 w-5 text-gray-400" />
+                          <Phone className="h-5 w-5 text-muted-foreground" />
                         </div>
                         <input
                           type="tel"
@@ -269,33 +269,33 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                           onChange={handleInputChange}
                           className={`w-full pl-12 pr-4 py-3 border ${
                             errors.phone
-                              ? "border-red-300 focus:ring-red-500 focus:border-red-500"
-                              : "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                          } rounded-xl focus:ring-2 transition-all duration-200 text-sm font-medium bg-gray-50 focus:bg-white`}
+                              ? "border-danger focus:ring-danger focus:border-danger"
+                              : "border-border focus:ring-primary focus:border-primary"
+                          } rounded-xl focus:ring-2 transition-all duration-200 text-sm font-medium bg-background focus:bg-background`}
                           placeholder="+1 (555) 123-4567"
                         />
                       </div>
                       {errors.phone && (
-                        <p className="mt-1 text-sm text-red-600">
+                        <p className="mt-1 text-sm text-danger">
                           {errors.phone}
                         </p>
                       )}
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label className="block text-sm font-semibold text-foreground mb-2">
                         Company/Organization
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                          <Building className="h-5 w-5 text-gray-400" />
+                          <Building className="h-5 w-5 text-muted-foreground" />
                         </div>
                         <input
                           type="text"
                           name="company"
                           value={formData.company}
                           onChange={handleInputChange}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm font-medium bg-gray-50 focus:bg-white"
+                          className="w-full pl-12 pr-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-sm font-medium bg-background focus:bg-background"
                           placeholder="Your company name"
                         />
                       </div>
@@ -305,15 +305,15 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
 
                 {/* Project Details Section */}
                 <div className="space-y-6">
-                  <div className="flex items-center gap-3 pb-3 border-b-2 border-green-100">
-                    <div className="p-3 rounded-xl bg-green-600 text-white shadow-md">
+                  <div className="flex items-center gap-3 pb-3 border-b-2 border-secondary/20">
+                    <div className="p-3 rounded-xl bg-secondary text-dark shadow-md">
                       <FileText className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">
+                      <h3 className="text-xl font-bold text-foreground">
                         Project Details
                       </h3>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-muted-foreground">
                         Specifications and requirements
                       </p>
                     </div>
@@ -321,8 +321,8 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
 
                   <div className="space-y-5">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Project Type <span className="text-red-500">*</span>
+                      <label className="block text-sm font-semibold text-foreground mb-2">
+                        Project Type <span className="text-danger">*</span>
                       </label>
                       <select
                         name="projectType"
@@ -330,9 +330,9 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                         onChange={handleInputChange}
                         className={`w-full px-4 py-3 border ${
                           errors.projectType
-                            ? "border-red-300 focus:ring-red-500 focus:border-red-500"
-                            : "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                        } rounded-xl focus:ring-2 transition-all duration-200 text-sm font-medium bg-gray-50 focus:bg-white appearance-none cursor-pointer`}
+                            ? "border-danger focus:ring-danger focus:border-danger"
+                            : "border-border focus:ring-primary focus:border-primary"
+                        } rounded-xl focus:ring-2 transition-all duration-200 text-sm font-medium bg-background focus:bg-background appearance-none cursor-pointer`}
                       >
                         <option value="">Select project type</option>
                         <option value="new-installation">
@@ -350,21 +350,21 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                         </option>
                       </select>
                       {errors.projectType && (
-                        <p className="mt-1 text-sm text-red-600">
+                        <p className="mt-1 text-sm text-danger">
                           {errors.projectType}
                         </p>
                       )}
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label className="block text-sm font-semibold text-foreground mb-2">
                         Building Type
                       </label>
                       <select
                         name="buildingType"
                         value={formData.buildingType}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm font-medium bg-gray-50 focus:bg-white appearance-none cursor-pointer"
+                        className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-sm font-medium bg-background focus:bg-background appearance-none cursor-pointer"
                       >
                         <option value="">Select building type</option>
                         <option value="residential">Residential Complex</option>
@@ -381,7 +381,7 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
 
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label className="block text-sm font-semibold text-foreground mb-2">
                           Number of Floors
                         </label>
                         <input
@@ -391,24 +391,24 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                           onChange={handleInputChange}
                           min="1"
                           max="200"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm font-medium bg-gray-50 focus:bg-white"
+                          className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-sm font-medium bg-background focus:bg-background"
                           placeholder="e.g., 12"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label className="block text-sm font-semibold text-foreground mb-2">
                           Timeline
                         </label>
                         <div className="relative">
                           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                            <Calendar className="h-5 w-5 text-gray-400" />
+                            <Calendar className="h-5 w-5 text-muted-foreground" />
                           </div>
                           <select
                             name="timeline"
                             value={formData.timeline}
                             onChange={handleInputChange}
-                            className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm font-medium bg-gray-50 focus:bg-white appearance-none cursor-pointer"
+                            className="w-full pl-12 pr-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-sm font-medium bg-background focus:bg-background appearance-none cursor-pointer"
                           >
                             <option value="">Select timeline</option>
                             <option value="immediate">Immediate (ASAP)</option>
@@ -422,18 +422,18 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label className="block text-sm font-semibold text-foreground mb-2">
                         Estimated Budget Range
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                          <DollarSign className="h-5 w-5 text-gray-400" />
+                          <DollarSign className="h-5 w-5 text-muted-foreground" />
                         </div>
                         <select
                           name="budget"
                           value={formData.budget}
                           onChange={handleInputChange}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm font-medium bg-gray-50 focus:bg-white appearance-none cursor-pointer"
+                          className="w-full pl-12 pr-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-sm font-medium bg-background focus:bg-background appearance-none cursor-pointer"
                         >
                           <option value="">Select budget range</option>
                           <option value="under-50k">Under Ksh. 50,000</option>
@@ -460,22 +460,22 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
 
               {/* Additional Details Section */}
               <div className="space-y-4">
-                <div className="flex items-center gap-3 pb-3 border-b-2 border-purple-100">
-                  <div className="p-3 rounded-xl bg-purple-600 text-white shadow-md">
+                <div className="flex items-center gap-3 pb-3 border-b-2 border-accent/20">
+                  <div className="p-3 rounded-xl bg-accent text-light shadow-md">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">
+                    <h3 className="text-xl font-bold text-foreground">
                       Additional Information
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-muted-foreground">
                       Any special requirements or details
                     </p>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-foreground mb-2">
                     Project Description & Special Requirements
                   </label>
                   <textarea
@@ -483,10 +483,10 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm font-medium bg-gray-50 focus:bg-white resize-vertical"
+                    className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-sm font-medium bg-background focus:bg-background resize-vertical"
                     placeholder="Please provide detailed information about your project including specific requirements, accessibility needs, safety considerations, timeline constraints, or any other relevant details that will help us provide an accurate quote..."
                   />
-                  <p className="mt-1 text-xs text-gray-500">
+                  <p className="mt-1 text-xs text-muted-foreground">
                     The more details you provide, the more accurate our quote
                     will be.
                   </p>
@@ -497,10 +497,10 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
         </div>
 
         {/* Fixed Footer */}
-        <div className="flex-shrink-0 px-6 py-4 border-t border-gray-200 bg-gray-50 rounded-b-2xl">
+        <div className="flex-shrink-0 px-6 py-4 border-t border-border bg-background rounded-b-2xl">
           <form onSubmit={handleSubmit} className="w-full">
             <div className="flex flex-col-reverse sm:flex-row gap-3 justify-between items-center">
-              <p className="text-xs text-gray-500 text-center sm:text-left">
+              <p className="text-xs text-muted-foreground text-center sm:text-left">
                 By submitting this form, you agree to be contacted by our team
                 regarding your project.
               </p>
@@ -509,18 +509,18 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                   type="button"
                   onClick={onClose}
                   disabled={isSubmitting}
-                  className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-xl hover:bg-gray-100 hover:border-gray-400 font-semibold transition-all duration-200 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-3 border-2 border-border text-foreground rounded-xl hover:bg-primary/10 hover:border-primary font-semibold transition-all duration-200 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl font-bold transition-all duration-200 shadow-lg hover:shadow-xl text-sm disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105"
+                  className="px-8 py-3 bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-light rounded-xl font-bold transition-all duration-200 shadow-lg hover:shadow-xl text-sm disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="w-4 h-4 border-2 border-light border-t-transparent rounded-full animate-spin"></div>
                       Submitting...
                     </span>
                   ) : (
