@@ -77,15 +77,6 @@ const getStatusColor = (status: Status): string => {
     }
 };
 
-interface Project {
-    title: string;
-    location: string;
-    type: string;
-    status: Status;
-    description: string;
-    image: string;
-    year: string;
-}
 
 interface TypeColors {
     [key: string]: string;
